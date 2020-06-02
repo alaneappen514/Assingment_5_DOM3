@@ -33,10 +33,9 @@ document.getElementById("addColumn").addEventListener("click", function(){
  });
 
 const removeRow = document.getElementById("removeRow");
-const table = document.getElementById("table");
-const row = table.getElementsByTagName("tr");
+const row = tablebody.getElementsByTagName("tr");
 button.addEventListener("click", function(e){
-    if (table.getElementsByTagName("tr").length === 0) {
+    if (tablebody.getElementsByTagName("tr").length === 0) {
         alert("The grid have no rows");
     }
     else {
@@ -45,10 +44,9 @@ button.addEventListener("click", function(e){
 });
 
 const removeColumn = document.getElementById("removeColumn");
-const table = document.getElementById("table");
-const column = table.getElementsByTagName("th");
+const column = tablebody.getElementsByTagName("th");
 button.addEventListener("click", function(e){
-    if (table.getElementsByTagName("th").length === 0) {
+    if (tablebody.getElementsByTagName("th").length === 0) {
         alert("The grid have no columns");
     }
     else {
