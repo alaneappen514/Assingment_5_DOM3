@@ -32,7 +32,7 @@ document.getElementById("addColumn").addEventListener("click", function(){
      count++;
  });
 
-const button = document.getElementById("removeRow");
+const removeRow = document.getElementById("removeRow");
 const table = document.getElementById("table");
 const row = table.getElementsByTagName("tr");
 button.addEventListener("click", function(e){
@@ -44,7 +44,7 @@ button.addEventListener("click", function(e){
     }
 });
 
-const button = document.getElementById("removeColumn");
+const removeColumn = document.getElementById("removeColumn");
 const table = document.getElementById("table");
 const column = table.getElementsByTagName("th");
 button.addEventListener("click", function(e){
