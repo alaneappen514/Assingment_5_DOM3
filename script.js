@@ -35,7 +35,7 @@ document.getElementById("addColumn").addEventListener("click", function(){
 const removeRow = document.getElementById("removeRow");
 const table = document.getElementById("table");
 const row = table.getElementsByTagName("tr");
-button.addEventListener("click", function(e){
+removeRow.addEventListener("click", function(e){
     if (table.getElementsByTagName("tr").length === 0) {
         alert("The grid have no rows");
     }
@@ -45,7 +45,7 @@ button.addEventListener("click", function(e){
 });
 
 const removeColumn = document.getElementById("removeColumn");
-button.addEventListener("click", function(e){
+removeColumn.addEventListener("click", function(e){
     if (table.getElementsByTagName("th").length === 0) {
         alert("The grid have no columns");
     }
