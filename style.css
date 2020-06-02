@@ -6,3 +6,17 @@ table, th, td {
     padding: 8px;
     text-align: left;    
   }
+
+  .red{
+    background-color: red;
+  }
+
+  .green{
+    background-color: green;
+  }
+
+  .blue{
+    background: blue;
+  }
+
+ 
