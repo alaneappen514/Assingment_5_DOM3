@@ -1,20 +1,43 @@
-document.getElementById("submit").addEventListener("click", function(event){
-    event.preventDefault();
-    const rows  = document.getElementById("addRow").value;
-    for(i = 0 ; i< rows; i++)
+
+let count = 0;
+
+
+document.getElementById("addRow").addEventListener("click", function(event){
+    let tablebody = document.getElementById("table");
+    let createRow =  document.createElement('tr');
+    if(count === 0)
     {
-      append();
+    tablebody.appendChild(createRow);
+    createRow.appendChild(document.createElement('th'));
     }
-    
+    else{
+        tablebody.appendChild(createRow);
+        for(i = 0; i< count; i++)
+        {
+            addColumns(createRow);
+        }
+    }
+
     });
 
-    function append(){
-        const columns = document.getElementById("addColumn").value;
-        let tablebody = document.getElementById("table");
-        let createRow =  document.createElement('tr');
-        tablebody.appendChild(createRow);
-        createRow.appendChild(document.createElement('th'));
-        createRow.appendChild(document.createElement('th'));
-    };
+document.getElementById("addColumn").addEventListener("click", function(event){
+     count++;
+ });
+
+ function addColumns(element){
+    element.appendChild(document.createElement('th'));
+ }
+ 
+
+
+
+       
+    
+
+
+
+ 
+
+
 
   
