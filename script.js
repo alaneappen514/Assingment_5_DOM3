@@ -1,4 +1,7 @@
 
+
+
+
 let count = 0;
 let colorchoice;
 
@@ -29,6 +32,18 @@ document.getElementById("addColumn").addEventListener("click", function(){
      count++;
  });
 
+const button = document.getElementById("removeRow");
+const table = document.getElementById("table");
+const row = table.getElementsByTagName("tr");
+button.addEventListener("click", function(e){
+    if (table.getElementsByTagName("tr").length === 0) {
+        alert("The grid have no rows");
+    }
+    else {
+        row[row.length - 1].remove();
+    }
+});
+
  document.getElementById("addColor").addEventListener("click",function(){
     var e = document.getElementById("color");
     colorchoice = e.options[e.selectedIndex].text;
@@ -54,6 +69,7 @@ document.getElementById("clearAllColor").addEventListener("click", function(even
  function addColumns(element){
     element.appendChild(document.createElement('th'));
  }
+
  
 
 
