@@ -44,13 +44,15 @@ button.addEventListener("click", function(e){
 });
 
 const removeColumn = document.getElementById("removeColumn");
-const column = tablebody.getElementsByTagName("th");
 button.addEventListener("click", function(e){
     if (tablebody.getElementsByTagName("th").length === 0) {
         alert("The grid have no columns");
     }
     else {
-        column[column.length - 1].remove();
+        for (let i = 0; i < row.length; i++)
+        {
+            row[i].removeChild(row[i].lastChild);
+        }
     }
 });
 
