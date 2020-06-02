@@ -6,7 +6,7 @@ button.addEventListener("click", function(e){
         alert("The grid have no rows");
     }
     else {
-        row[length - 1].remove();
+        row[row.length - 1].remove();
     }
 });
  
