@@ -1,12 +1,12 @@
-const button = document.getElementById("removeRow");
+const button = document.getElementById("removeColumn");
 const table = document.getElementById("table");
-const row = table.getElementsByTagName("tr");
+const column = table.getElementsByTagName("th");
 button.addEventListener("click", function(e){
-    if (table.getElementsByTagName("tr").length === 0) {
-        alert("The grid have no rows");
+    if (table.getElementsByTagName("th").length === 0) {
+        alert("The grid have no columns");
     }
     else {
-        row[row.length - 1].remove();
+        column[column.length - 1].remove();
     }
 });
  
